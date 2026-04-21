@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: nwo-eml-regression
+message: >-
+  This software implements the EML operator and symbolic-regression
+  framework introduced by Andrzej Odrzywołek. If you use this software,
+  please cite both the software (via Zenodo DOI when assigned) and the
+  original paper below.
+type: software
+authors:
+  - name: NWO Robotics
+    website: https://nworobotics.cloud
+preferred-citation:
+  type: article
+  title: All elementary functions from a single binary operator
+  authors:
+    - family-names: Odrzywołek
+      given-names: Andrzej
+      affiliation: >-
+        Institute of Theoretical Physics, Jagiellonian University,
+        30-348 Krakow, Poland
+      email: andrzej.odrzywolek@uj.edu.pl
+  year: 2026
+  month: 3
+  identifiers:
+    - type: other
+      value: arXiv:2603.21852
+      description: arXiv preprint ID
+  url: https://arxiv.org/abs/2603.21852
+  abstract: >-
+    A single binary operator, eml(x, y) = exp(x) - ln(y), together with
+    the constant 1, generates the standard repertoire of a scientific
+    calculator. This includes constants such as e, pi, and i; arithmetic
+    operations including addition, subtraction, multiplication, division,
+    and exponentiation as well as the usual transcendental and algebraic
+    functions.
