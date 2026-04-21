@@ -1,0 +1,57 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nwo-eml-regression"
+version = "0.1.0"
+description = "Symbolic regression over EML trees (arXiv:2603.21852)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "NWO Robotics", email = "create@nwo.capital" }]
+keywords = [
+    "symbolic-regression",
+    "elementary-functions",
+    "eml",
+    "odrzywolek",
+    "arxiv-2603.21852",
+    "differentiable-programming",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "numpy>=1.24",
+    "torch>=2.0",
+]
+
+[project.optional-dependencies]
+sympy = ["sympy>=1.12"]
+dev = ["pytest>=7", "pytest-cov>=4", "ruff>=0.4", "sympy>=1.12"]
+
+[project.scripts]
+nwo-eml = "nwo_eml.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/RedCiprianPater/nwo-eml-regression"
+"Bug Tracker" = "https://github.com/RedCiprianPater/nwo-eml-regression/issues"
+Paper = "https://arxiv.org/abs/2603.21852"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nwo_eml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
